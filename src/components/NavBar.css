@@ -1,0 +1,9 @@
+.barra {
+    display: flex;
+    list-style: none;
+   
+}
+
+.barra li {
+    margin-left: 50px;
+}

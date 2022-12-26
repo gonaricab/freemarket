@@ -1,10 +1,11 @@
+import './NavBar.css'
 const NavBar = () => {
     return (
         <div>
-          <ul>
-            <li>Inicio</li>
-            <li>Productos</li>
-            <li>Servicios</li>
+          <ul className="barra"> 
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Nosotros</a></li>
           </ul>
         </div>
     )
