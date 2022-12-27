@@ -1,9 +1,18 @@
 .barra {
     display: flex;
-    list-style: none;
-   
+    align-items: center;
+    justify-content: center;
 }
 
 .barra li {
-    margin-left: 50px;
+    list-style: none;
+    margin-left: 10px;
+}
+.divUno {
+  display: flex;
+  justify-content: space-around;
+}
+
+.carrito {
+    height: 30px; 
 }

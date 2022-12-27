@@ -1,12 +1,18 @@
 import './NavBar.css'
+import carrito from './carrito.png'
+
 const NavBar = () => {
+
     return (
-        <div>
+        <div className="divUno">
           <ul className="barra"> 
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Productos</a></li>
             <li><a href="#">Nosotros</a></li>
-          </ul>
+          </ul> 
+          <div className='divDos'>
+            <img src={carrito} className="carrito"/>
+          </div>
         </div>
     )
 };
