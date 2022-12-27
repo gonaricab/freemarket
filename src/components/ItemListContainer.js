@@ -1,8 +1,9 @@
- function ItemListContainer (greeting) {
+import './ItemListContainer.css'
+function ItemListContainer (greeting) {
   return (
-    <div>
+    <div className="greeting">
       <h1>{greeting.title}</h1>
     </div>
   )
 }
-export default ItemListContainer
+export default ItemListContainer;

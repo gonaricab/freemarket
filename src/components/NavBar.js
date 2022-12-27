@@ -1,5 +1,5 @@
 import './NavBar.css'
-import carrito from './carrito.png'
+
 
 const NavBar = () => {
 
@@ -10,9 +10,6 @@ const NavBar = () => {
             <li><a href="#">Productos</a></li>
             <li><a href="#">Nosotros</a></li>
           </ul> 
-          <div className='divDos'>
-            <img src={carrito} className="carrito"/>
-          </div>
         </div>
     )
 };
