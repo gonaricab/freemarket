@@ -1,17 +1,11 @@
-import './App.css';
-import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
-import Header from './components/Header';
-import CartWidget from './components/CartWidget';
-
+import NavBar from "./components/NavBar/NavBar";
+import ItemListContainer from "./components/pages/ItemListContainer";
 function App() {
 
   return (
     <div>
-      <Header/>
-      <NavBar></NavBar>
-      <CartWidget/>
-      <ItemListContainer title="Bienvenido!"/>
+      <NavBar/>
+      <ItemListContainer/>
     </div>
   );
 }

@@ -1,0 +1,15 @@
+.navBar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: yellow;
+}
+
+.options {
+    list-style: none;
+    display: flex;
+}
+
+.options li {
+    margin-left: 30px;
+}
