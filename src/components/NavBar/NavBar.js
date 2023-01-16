@@ -8,7 +8,7 @@ const NavBar = () => {
             <ul className='options'>
                 <li>Todo</li>
                 <li>Notebooks</li>
-                <li>Mobile Phones</li>
+                <li>Teléfonos Celulares</li>
             </ul>
         </div>
         <div><CartiWidget/></div>
