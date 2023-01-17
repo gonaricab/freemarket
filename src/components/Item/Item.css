@@ -1,0 +1,10 @@
+.imagen {
+    width: 150px;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
