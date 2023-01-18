@@ -1,0 +1,9 @@
+.image {
+    width: 150px;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

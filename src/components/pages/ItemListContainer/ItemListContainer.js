@@ -8,6 +8,7 @@ const [filteredProducts, setfilteredProducts] = useState([]);
 const getProducts = fetch ('https://fakestoreapi.com/products');
 const {category} = useParams();
 
+
  useEffect (() => {
   getProducts
   .then ((res) => {
@@ -24,7 +25,7 @@ const {category} = useParams();
   if(category) {
     const removeCharacters = category.includes('%20')
       ? category?.replace('%20', '')
-      : category;
+      : category
     const filterProducts = products.filter((product) => {return product.category === removeCharacters}
     );
     setfilteredProducts(filterProducts);
