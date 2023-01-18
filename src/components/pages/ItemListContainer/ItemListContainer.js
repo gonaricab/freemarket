@@ -24,7 +24,7 @@ const {category} = useParams();
  useEffect(() =>{
   if(category) {
     const removeCharacters = category.includes('%20')
-      ? category?.replace('%20', '')
+      ? category.replace('%20', '')
       : category
     const filterProducts = products.filter((product) => {return product.category === removeCharacters}
     );
@@ -35,7 +35,6 @@ const {category} = useParams();
 
  return (
   <div>
-    {/* <ItemCount/> */}
     <ItemList productos = {category ? filteredProducts : products} />
   </div>
  );

@@ -10,7 +10,7 @@ const ItemList = ({productos}) => {
       </Link >
         
         
-    ))};
+    ))}
    </ul>
   )
 }
