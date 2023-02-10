@@ -9,10 +9,9 @@ const NavBar = () => {
         <div>
             <ul className='options'>
                 <li><NavLink to="/">All</NavLink></li>
-                <li><NavLink to="/category/men's clothing">Men's clothing</NavLink></li>
-                <li><NavLink to="/category/women's clothing">Women's clothing</NavLink></li>
-                <li><NavLink to="/category/jewelery">Jewelery</NavLink></li>
-                <li><NavLink to="/category/electronics">Electronics</NavLink></li>
+                <li><NavLink to="/category/hombre">Ropa para Hombre</NavLink></li>
+                <li><NavLink to="/category/mujer">Ropa para mujer</NavLink></li>
+                <li><NavLink to="/category/tech">Electrónica</NavLink></li>
             </ul>
         </div>
         <div>

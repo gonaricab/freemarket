@@ -2,46 +2,53 @@ import ItemList from "../../ItemList/ItemList";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loading from "../../Loading/Loading"
+import {getFirestore,getDocs,collection, query, where} from "firebase/firestore";
 
 const ItemListContainer = () => {
 const [products, setProducts] = useState([]);
-const [filteredProducts, setfilteredProducts] = useState([]);
-const getProducts = fetch ('https://fakestoreapi.com/products');
+const getProducts = () => {
+const db = getFirestore();
+const querySnapshot = collection(db, "products");
+
+
+  if(category) {
+    const newConfiguration = query(querySnapshot,where("categoryid", "==", category))
+    getDocs(newConfiguration)
+  .then((response) => {
+    const data = response.docs.map((doc) => {
+      return {id: doc.id,...doc.data()}
+    })
+    setLoading(false);
+    setProducts(data);
+  })
+  .catch(error => console.log(error));
+  }
+  else {
+  getDocs(querySnapshot)
+  .then((response) => {
+    const data = response.docs.map((doc) => {
+      return {id: doc.id,...doc.data()}
+    })
+    setLoading(false);
+    setProducts(data);
+  })
+  .catch(error => console.log(error));
+  }
+  
+};
 const {category} = useParams();
 const [loading, setLoading] = useState(true);
 
  useEffect (() => {
-  setTimeout(() => {
-    getProducts
-  .then ((res) => {
-    return res.json();
-  })
-  .then ((response) =>{
-    setLoading(false);
-    setProducts(response);
-  })
-  .catch((error) => console.log(error));
-  }, 3000)
+  getProducts();
   
- }, []);
+ }, [category]);
 
- useEffect(() =>{
-  if(category) {
-    const removeCharacters = category.includes('%20')
-      ? category.replace('%20', '')
-      : category
-    const filterProducts = products.filter((product) => {return product.category === removeCharacters}
-    );
-    setfilteredProducts(filterProducts);
-  }
-  
- }, [category])
 
  return (
   <div>
-    {loading === true 
-    ? <Loading/> 
-    :<ItemList productos = {category ? filteredProducts : products} />}
+    {loading ? <Loading/> 
+    :<ItemList productos = {products} />}
     
   </div>
  );
