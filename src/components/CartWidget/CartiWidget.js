@@ -17,7 +17,7 @@ useEffect(() =>{
   return (
     <div>
         {total}
-        <img className='imagenCarrito' alt="carrito" src="./images/carrito.png"/>
+        <img className='imagenCarrito' alt="carrito" src="/images/carrito.png"/>
     </div>
   )
 }
