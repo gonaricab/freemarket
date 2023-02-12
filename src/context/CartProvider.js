@@ -17,7 +17,8 @@ const addItem = (item,quantity) => {
       quantity: quantity,
       category: item.categoryid,
       description: item.description,
-      image: item.imageid
+      image: item.imageid,
+      stock: item.stock
     };
     setCart([...cart, newProduct]);
   };
