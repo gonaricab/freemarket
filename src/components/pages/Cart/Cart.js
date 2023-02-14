@@ -30,6 +30,7 @@ useEffect (() => {
 }, [cart]);
 
 if(cart.lenght === 0) {
+  console.log(cart.lenght)
   return <h1>No hay productos en el carrito</h1>
 }
 
@@ -60,11 +61,11 @@ const updateStockProducts = () => {
   })
   .catch((error) => console.log(error))
   })
+  clear();
 };
 
 const handleInput = (event) => {
-console.log(event.target.value)
-console.log(event.target.name)
+
   setFormValue({
     ...formValue,
     [event.target.name]: event.target.value,
@@ -73,6 +74,7 @@ console.log(event.target.name)
 } 
 
   return (
+    
     <div style={{display:"flex", flexDirection:"row"}}>
      <div style={{padding: "10px", widows:"500px"}}>
       <ul style={{listStyle: "none"}}>
