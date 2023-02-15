@@ -14,6 +14,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+Descripción del proyecto: se trata de una tienda on-line para comprar productos en distintas categorías, permite agregar al carrito, y ordenar la compra. La orden se refleja en firebase, y actualiza el stock. Agregué el mínimo indispensable de estilos porque no manejo lo suficiente lo que es css y html. Saludos!
+
 
 
 ![Alt Text](./Animation.gif)
