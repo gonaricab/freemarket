@@ -8,12 +8,11 @@ const ItemListContainer = () => {
 const [products, setProducts] = useState([]);
 const getProducts = () => {
 const db = getFirestore();
-const querySnapshot = collection(db, "products");
+const queryBase = collection(db, "products");
+const querySnapshot = category ? query( queryBase, where("categoryid", "==", category)) 
+: queryBase;
 
-
-  if(category) {
-    const newConfiguration = query(querySnapshot,where("categoryid", "==", category))
-    getDocs(newConfiguration)
+getDocs(querySnapshot)
   .then((response) => {
     const data = response.docs.map((doc) => {
       return {id: doc.id,...doc.data()}
@@ -22,19 +21,6 @@ const querySnapshot = collection(db, "products");
     setProducts(data);
   })
   .catch(error => console.log(error));
-  }
-  else {
-  getDocs(querySnapshot)
-  .then((response) => {
-    const data = response.docs.map((doc) => {
-      return {id: doc.id,...doc.data()}
-    })
-    setLoading(false);
-    setProducts(data);
-  })
-  .catch(error => console.log(error));
-  }
-  
 };
 const {category} = useParams();
 const [loading, setLoading] = useState(true);

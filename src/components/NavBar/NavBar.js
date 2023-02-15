@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const NavBar = () => {
   return (
     <div className="navBar">
-        <div>logo</div>
+        <div>FREEMARKET!</div>
         <div>
             <ul className='options'>
                 <li><NavLink to="/">All</NavLink></li>

@@ -30,7 +30,6 @@ useEffect (() => {
 }, [cart]);
 
 if(cart.lenght === 0) {
-  console.log(cart.lenght)
   return <h1>No hay productos en el carrito</h1>
 }
 

@@ -18,7 +18,7 @@ const getProduct = () => {
   })
   .catch((error) => console.log(error))
 };
-/* const getProduct = fetch (`https://fakestoreapi.com/products/${id}`)  */
+
 
 useEffect(() => {
     getProduct();
